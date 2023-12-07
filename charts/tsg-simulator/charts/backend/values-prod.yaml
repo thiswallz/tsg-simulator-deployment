@@ -8,4 +8,4 @@ service:
   type: LoadBalancer
   port: 8080
 image:
-  tag: "bf41adc6981738c64827361f80b8e9afe081380e"
+  tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
