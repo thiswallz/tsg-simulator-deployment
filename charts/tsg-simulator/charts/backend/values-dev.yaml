@@ -4,7 +4,7 @@ springprofile: dev
 nameOverride: "tsg-backend-dev"
 fullnameOverride: "tsg-backend-dev"
 service:
-  type: NodePort
+  type: LoadBalancer
   port: 8080
 image:
-  tag: "31f423106062c464c9d5099bdbf4f724b2b39bf2"
+  tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
