@@ -2,7 +2,7 @@ apiVersion: v2
 name: tsg-simulator
 description: Troubleshooting and Safety Game Simulator
 sources:
-  - https://github.com/thiswallz/tsg-simulator
+  - https://github.com/thiswallz/tsg-simulator-deployment
 
 type: application
 

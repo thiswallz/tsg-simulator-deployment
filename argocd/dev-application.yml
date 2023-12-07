@@ -13,5 +13,5 @@ spec:
       valueFiles:
       - values-dev.yaml
     path: charts/tsg-simulator/charts/backend
-    repoURL: https://github.com/thiswallz/tsg-simulator
+    repoURL: https://github.com/thiswallz/tsg-simulator-deployment
     targetRevision: HEAD
