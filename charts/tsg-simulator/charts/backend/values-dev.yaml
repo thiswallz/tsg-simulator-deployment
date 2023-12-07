@@ -7,4 +7,4 @@ service:
   type: NodePort
   port: 8080
 image:
-  tag: "bf41adc6981738c64827361f80b8e9afe081380e"
+  tag: "31f423106062c464c9d5099bdbf4f724b2b39bf2"

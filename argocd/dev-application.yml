@@ -15,3 +15,6 @@ spec:
     path: charts/tsg-simulator/charts/backend
     repoURL: https://github.com/thiswallz/tsg-simulator-deployment
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
