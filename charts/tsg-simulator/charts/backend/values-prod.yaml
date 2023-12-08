@@ -1,6 +1,6 @@
 namespace:
   name: prod
-replicaCount: 2
+replicaCount: 1
 nameOverride: "tsg-backend-prod"
 fullnameOverride: "tsg-backend-prod"
 springprofile: prod
