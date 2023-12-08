@@ -12,11 +12,7 @@ ingress:
   enabled: true
   annotations: {}
   hosts:
-    - host: api-dev.tsg-simulator.com
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            serviceName: tsg-backend-dev
-            servicePort: 8080
-  tls: []
+    - host: tsg-simulator.com
+  tls:
+    hosts:
+      - tsg-simulator.com
