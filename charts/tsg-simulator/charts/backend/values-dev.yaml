@@ -12,9 +12,6 @@ image:
 ingress:
   enabled: true
   className: nginx
-  metadata:
-    labels:
-      app: tsg-backend-dev
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
