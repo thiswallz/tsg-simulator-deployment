@@ -8,9 +8,13 @@ service:
   port: 8080
 image:
   tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
+
 ingress:
   enabled: true
   className: nginx
+  metadata:
+    labels:
+      app: tsg-backend-dev
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
@@ -20,4 +24,4 @@ ingress:
     - host: api.dev.tsg-simulator.com
       paths:
         - path: /
-          pathType: Prefix
+          pathType: ImplementationSpecific
