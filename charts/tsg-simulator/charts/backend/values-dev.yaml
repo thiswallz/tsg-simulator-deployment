@@ -22,6 +22,3 @@ ingress:
       paths:
         - path: "/(.*)"
           pathType: Prefix
-          backend:
-            service: tsg-backend-dev-controller
-            port: 8080
