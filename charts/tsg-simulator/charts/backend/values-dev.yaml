@@ -10,11 +10,6 @@ image:
   tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
 ingress:
   enabled: true
-  annotations:
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/enable-cors: "true"
-    nginx.ingress.kubernetes.io/proxy-body-size: "8m"
-    nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.example.org"
   className: "nginx"
   hosts:
     - host: tsg-simulator.com
@@ -27,7 +22,3 @@ ingress:
               name: tsg-backend-dev
               port:
                 number: 8080
-  tls:
-    - secretName: ""
-      hosts:
-        - ""
