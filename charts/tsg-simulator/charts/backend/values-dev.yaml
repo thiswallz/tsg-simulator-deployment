@@ -11,7 +11,7 @@ image:
 
 ingress:
   enabled: true
-  className: nginx
+  className: azure-application-gateway
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
