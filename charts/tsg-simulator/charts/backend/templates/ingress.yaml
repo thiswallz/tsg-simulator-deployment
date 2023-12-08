@@ -16,7 +16,6 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}-ingress
-  namespace: ingress-nginx
   labels:
     {{- include "helm.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
