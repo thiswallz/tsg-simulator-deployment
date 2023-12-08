@@ -59,6 +59,7 @@ readinessProbe:
   failureThreshold: 3
 
 ingress:
+  name: "tsg-backend-ingress"
   enabled: false
   annotations: {}
   hosts: []
