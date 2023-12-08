@@ -14,7 +14,7 @@ ingress:
   hosts:
     - host: tsg-simulator.com
       paths:
-        - path: /api/
+        - path: /
           pathType: Prefix
           backend:
             serviceName: tsg-backend-dev
