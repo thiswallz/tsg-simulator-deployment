@@ -10,15 +10,14 @@ image:
   tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
 ingress:
   enabled: true
-  className: "nginx"
+  className: nginx
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: "/$1"
-    nginx.ingress.kubernetes.io/use-regex: "true"
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     # -- Provide CORS allowed origin.
     nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.dev.tsg-simulator.com/"
   hosts:
     - host: api.dev.tsg-simulator.com
       paths:
-        - path: "/(.*)"
+        - path: /
           pathType: Prefix
