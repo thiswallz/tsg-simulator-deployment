@@ -15,4 +15,4 @@ ingress:
     - host: tsg-simulator.com
   tls:
     hosts:
-      - tsg-simulator.com
+      - host: tsg-simulator.com
