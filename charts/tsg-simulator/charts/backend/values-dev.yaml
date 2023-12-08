@@ -21,4 +21,4 @@ ingress:
             service:
               name: tsg-backend-dev
               port:
-                number: 8080
+                name: http
