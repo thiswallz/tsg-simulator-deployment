@@ -8,3 +8,17 @@ service:
   port: 8080
 image:
   tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"
+ingress:
+  enabled: true
+  annotations: {}
+  hosts:
+    - host: dev.tsg-simulator.com
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: tsg-backend-dev
+              port:
+                number: 8080
+  tls: []
