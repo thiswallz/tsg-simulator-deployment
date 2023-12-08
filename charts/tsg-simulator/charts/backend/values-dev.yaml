@@ -11,14 +11,17 @@ image:
 ingress:
   enabled: true
   className: "nginx"
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: "/$1"
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    # -- Provide CORS allowed origin.
+    nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.dev.tsg-simulator.com/"
   hosts:
-    - host: tsg-simulator.com
+    - host: api.dev.tsg-simulator.com
       paths:
-        - path: /
+        - path: "/(.*)"
           pathType: Prefix
           backend:
-            serviceName: tsg-backend-dev
-            service:
-              name: tsg-backend-dev
-              port:
-                name: http
+            service: tsg-backend-dev-controller
+            port: 8080
