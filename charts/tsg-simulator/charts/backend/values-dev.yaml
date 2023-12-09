@@ -17,16 +17,16 @@ ingress:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-regex: "true"
   hosts:
-    - host: api.dev.tsg-simulator.com
+    - host: api-dev.tsg-simulator.com
       paths:
-        - path: /
+        - path: /(.*)
           pathType: Prefix
           backend:
             service: tsg-backend-dev
             port: 8080
-    - host: health.dev.tsg-simulator.com
+    - host: health-dev.tsg-simulator.com
       paths:
-        - path: /
+        - path: /(.*)
           pathType: Prefix
           backend:
             service: tsg-backend-dev
@@ -36,4 +36,4 @@ ingress:
         pathType: Prefix
         backend:
           service: tsg-backend-dev
-          port: 8081
+          port: 80801
