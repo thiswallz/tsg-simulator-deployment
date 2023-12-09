@@ -5,7 +5,7 @@ nameOverride: "tsg-backend-prod"
 fullnameOverride: "tsg-backend-prod"
 springprofile: prod
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 8080
 image:
   tag: "f814b43fb1d653f9604c97fdb711871066a3fb90"

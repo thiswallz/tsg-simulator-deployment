@@ -11,7 +11,7 @@ image:
 
 ingress:
   enabled: true
-  className: azure-application-gateway
+  className: nginx
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
@@ -21,4 +21,4 @@ ingress:
     - host: api.dev.tsg-simulator.com
       paths:
         - path: /
-          pathType: ImplementationSpecific
+          pathType: Prefix
