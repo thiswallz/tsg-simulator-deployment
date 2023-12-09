@@ -30,10 +30,10 @@ ingress:
           pathType: Prefix
           backend:
             service: tsg-backend-dev
-            port: 8080
+            port: 8081
     - paths:
       - path: /(.*)
         pathType: Prefix
         backend:
           service: tsg-backend-dev
-          port: 8080
+          port: 8081
