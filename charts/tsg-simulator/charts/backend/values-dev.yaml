@@ -14,7 +14,6 @@ ingress:
   className: nginx
   annotations: {}
   hosts:
-    - host: "*"
-      paths:
-        - path: /(.*)
-          pathType: Prefix
+    - paths:
+      - path: /(.*)
+        pathType: Prefix
