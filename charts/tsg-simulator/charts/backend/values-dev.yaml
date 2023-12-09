@@ -36,4 +36,4 @@ ingress:
         pathType: Prefix
         backend:
           service: tsg-backend-dev
-          port: 80801
+          port: 8080
