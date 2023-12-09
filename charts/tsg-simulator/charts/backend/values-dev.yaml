@@ -12,13 +12,9 @@ image:
 ingress:
   enabled: true
   className: nginx
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    # -- Provide CORS allowed origin.
-    nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.dev.tsg-simulator.com/"
+  annotations: {}
   hosts:
-    - host: api.dev.tsg-simulator.com
-      paths:
-        - path: /
-          pathType: Prefix
+    - http:
+        paths:
+          - path: /(.*)
+            pathType: Prefix
