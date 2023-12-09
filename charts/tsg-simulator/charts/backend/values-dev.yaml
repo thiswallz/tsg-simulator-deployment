@@ -22,24 +22,18 @@ ingress:
         - path: /
           pathType: Prefix
           backend:
-            service:
-              name: tsg-backend-dev
-              port:
-                number: 8080
+            service: tsg-backend-dev
+            number: 8080
     - host: health.dev.tsg-simulator.com
       paths:
         - path: /
           pathType: Prefix
           backend:
-            service:
-              name: tsg-backend-dev
-              port:
-                number: 8081
+            service: tsg-backend-dev
+            number: 8081
     - paths:
       - path: /(.*)
         pathType: Prefix
         backend:
-          service:
-            name: tsg-backend-dev
-            port:
-              number: 8081
+          service: tsg-backend-dev
+          number: 8080
