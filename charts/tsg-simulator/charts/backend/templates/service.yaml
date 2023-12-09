@@ -17,3 +17,4 @@ spec:
       name: metrics
   selector:
     {{- include "helm.selectorLabels" . | nindent 4 }}
+    app: tsg-backend-dev
